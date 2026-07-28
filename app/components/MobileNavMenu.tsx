@@ -4,19 +4,18 @@ import {
   Menu,
   X,
 } from "lucide-react";
-// import { useState } from "react"
-// import { usePageTransition } from "../components/animations/TransitionProvider"
+
 
 interface MobNavigationProps {
   navigate: (path: string) => void;
   setIsMenuOpen: React.Dispatch<React.SetStateAction<boolean>>;
   isMenuOpen: boolean;
+  className?:string
 }
 
 
-const MobileNavMenu = ({navigate,setIsMenuOpen,isMenuOpen}:MobNavigationProps) => {
-//     const { navigate } = usePageTransition()
-//   const [isMenuOpen, setIsMenuOpen] = useState(false);
+const MobileNavMenu = ({navigate,setIsMenuOpen,isMenuOpen,className}:MobNavigationProps) => {
+
     return (
         <>
             <div className="fixed top-6 right-6 z-50 flex items-center gap-3">
@@ -26,7 +25,7 @@ const MobileNavMenu = ({navigate,setIsMenuOpen,isMenuOpen}:MobNavigationProps) =
                 <button
                     onClick={() => setIsMenuOpen(!isMenuOpen)}
                     aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-                    className="flex h-14 w-14 items-center justify-center rounded-full bg-accent shadow-xl transition-all duration-300 hover:scale-110 lg:hidden"
+                    className={`flex h-14 w-14 items-center justify-center rounded-full bg-accent shadow-xl transition-all duration-300 hover:scale-110 lg:hidden`}
                 >
                     {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
                 </button>

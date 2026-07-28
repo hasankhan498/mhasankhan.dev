@@ -101,7 +101,10 @@ const page = () => {
     <div className="relative">
       <div className="fixed bg-background/10 inset-0 min-h-screen h-auto z-10 backdrop-blur-xs" />
 
-      <div className="absolute inset-0 text-foreground/5 font-heading font-black text-9xl uppercase text-center z-0 pt-10 pointer-events-none select-none">
+      {/* <div className="absolute inset-0 text-foreground/5 font-heading font-black text-9xl uppercase text-center z-0 pt-10 pointer-events-none select-none">
+        Resume
+      </div> */}
+      <div className="absolute inset-0 overflow-hidden text-foreground/10 font-heading font-black text-5xl sm:text-7xl md:text-9xl uppercase text-center z-0 pt-10 pointer-events-none select-none">
         Resume
       </div>
 

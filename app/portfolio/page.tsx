@@ -28,16 +28,16 @@ const page = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState("All");
 
-  const [ portfolioItems, setPortfolioItems ] = useState<PortfolioItem[] | null>(null)
+  const [portfolioItems, setPortfolioItems] = useState<PortfolioItem[] | null>(null)
 
   useEffect(() => {
-  async function fetchProjects(){
-    const proj = await getProject()
-    setPortfolioItems(proj)
-  }
-  fetchProjects();
+    async function fetchProjects() {
+      const proj = await getProject()
+      setPortfolioItems(proj)
+    }
+    fetchProjects();
   }, [])
-  
+
 
 
   const filteredItems = activeCategory === "All"
@@ -48,7 +48,10 @@ const page = () => {
     <div className="relative">
       <div className="fixed bg-background/10 inset-0 min-h-screen h-auto z-10 backdrop-blur-xs" />
 
-      <div className="absolute inset-0 text-foreground/10 font-heading font-black text-9xl uppercase text-center z-0 pt-10 pointer-events-none select-none">
+      {/* <div className="absolute inset-0 text-foreground/10 font-heading font-black text-9xl uppercase text-center z-0 pt-10 pointer-events-none select-none">
+        Works
+      </div> */}
+      <div className="absolute inset-0 overflow-hidden text-foreground/10 font-heading font-black text-5xl sm:text-7xl md:text-9xl uppercase text-center z-0 pt-10 pointer-events-none select-none">
         Works
       </div>
 
