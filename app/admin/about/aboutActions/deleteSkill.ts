@@ -5,12 +5,7 @@ import prisma from "@/lib/prisma";
 export async function deleteSkill(formData: FormData) {
   const id = Number(formData.get("id"));
 
-  if (!id) {
-    return {
-      success: false,
-      message: "Invalid skill id.",
-    };
-  }
+  if (!id) return
 
   await prisma.skill.delete({
     where: {
@@ -18,8 +13,5 @@ export async function deleteSkill(formData: FormData) {
     },
   });
 
-  return {
-    success: true,
-    message: "Skill deleted successfully.",
-  };
+  return;
 }
