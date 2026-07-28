@@ -1,12 +1,17 @@
-import React from 'react'
 import {
   HomeIcon,
   User,
   BriefcaseBusiness,
   Mail,
-  NotebookPen,
   Bot
 } from "lucide-react";
+
+
+interface TabNavigationProps {
+  setIsMenuOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  navigate: (path: string) => void;
+}
+
 
 export const navItems = [
   { id: 1, link: "/", title: "Home", icon: HomeIcon },
@@ -18,7 +23,7 @@ export const navItems = [
 
 
 
-const TabNavigation = ({setIsMenuOpen, navigate}) => {
+const TabNavigation = ({setIsMenuOpen, navigate}:TabNavigationProps) => {
     return (
         <nav className="hidden lg:flex flex-col items-end gap-5">
             {navItems.map((item) => (
