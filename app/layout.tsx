@@ -5,6 +5,7 @@ import { ThemeProvider } from "./components/providers/ThemeProvider";
 import PageTransition from "./components/animations/PageTransitions";
 import { TransitionProvider } from "./components/animations/TransitionProvider";
 import AuthProvider from "./components/providers/AuthProvider";
+import FloatingWhatsApp from "./components/common/CustomWhatsAppBtn";
 
 
 const inter = Inter({
@@ -54,6 +55,7 @@ export default function RootLayout({
             disableTransitionOnChange
           >
             {children}
+            <FloatingWhatsApp />
           </ThemeProvider>
           </AuthProvider>
          </TransitionProvider>
