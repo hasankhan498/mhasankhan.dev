@@ -5,6 +5,7 @@ import {
   BriefcaseBusiness,
   Mail,
   NotebookPen,
+  Bot
 } from "lucide-react";
 
 export const navItems = [
@@ -12,6 +13,7 @@ export const navItems = [
   { id: 2, link: "/about", title: "About", icon: User },
   { id: 3, link: "/portfolio", title: "Portfolio", icon: BriefcaseBusiness },
   { id: 4, link: "/contact", title: "Contact", icon: Mail },
+  { id: 5, link: "/ai", title: "ChatBot", icon: Bot },
 ];
 
 
