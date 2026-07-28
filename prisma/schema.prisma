@@ -18,7 +18,7 @@ model About {
   phone       String
   email       String
   languages   String
-  updatedAt   DateTime
+  updatedAt   DateTime @updatedAt
 }
 
 model AboutStat {
@@ -26,7 +26,7 @@ model AboutStat {
   number    String
   text      String
   createdAt DateTime @default(now())
-  updatedAt DateTime
+  updatedAt DateTime @updatedAt
 }
 
 model ContactMessage {
@@ -47,7 +47,7 @@ model Education {
   duration    String
   description String
   createdAt   DateTime @default(now())
-  updatedAt   DateTime
+  updatedAt   DateTime @updatedAt
 }
 
 model Experience {
@@ -57,7 +57,7 @@ model Experience {
   duration    String
   description String
   createdAt   DateTime @default(now())
-  updatedAt   DateTime
+  updatedAt   DateTime @updatedAt
 }
 
 model Hero {
@@ -69,7 +69,7 @@ model Hero {
   imagePublicId String
   buttonText    String
   buttonLink    String
-  updatedAt     DateTime
+  updatedAt     DateTime @updatedAt
 }
 
 model Project {
@@ -80,7 +80,7 @@ model Project {
   imagePublicId String
   link          String
   createdAt     DateTime @default(now())
-  updatedAt     DateTime
+  updatedAt     DateTime @updatedAt
 }
 
 model Skill {
@@ -88,7 +88,7 @@ model Skill {
   name       String
   percentage Int
   createdAt  DateTime @default(now())
-  updatedAt  DateTime
+  updatedAt  DateTime @updatedAt
 }
 
 model User {
@@ -98,7 +98,7 @@ model User {
   password  String
   role      Role     @default(ADMIN)
   createdAt DateTime @default(now())
-  updatedAt DateTime
+  updatedAt DateTime @updatedAt
 }
 
 enum Role {
