@@ -7,6 +7,100 @@ datasource db {
   provider = "postgresql"
 }
 
+model About {
+  id          Int      @id @default(autoincrement())
+  heading     String
+  name        String
+  age         String
+  nationality String
+  freelance   String
+  address     String
+  phone       String
+  email       String
+  languages   String
+  updatedAt   DateTime
+}
+
+model AboutStat {
+  id        Int      @id @default(autoincrement())
+  number    String
+  text      String
+  createdAt DateTime @default(now())
+  updatedAt DateTime
+}
+
+model ContactMessage {
+  id         Int      @id @default(autoincrement())
+  name       String
+  email      String
+  subject    String?
+  message    String
+  isRead     Boolean  @default(false)
+  isArchived Boolean  @default(false)
+  createdAt  DateTime @default(now())
+}
+
+model Education {
+  id          Int      @id @default(autoincrement())
+  degree      String
+  institute   String
+  duration    String
+  description String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime
+}
+
+model Experience {
+  id          Int      @id @default(autoincrement())
+  title       String
+  company     String
+  duration    String
+  description String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime
+}
+
+model Hero {
+  id            Int      @id @default(autoincrement())
+  name          String
+  title         String
+  description   String
+  imageUrl      String
+  imagePublicId String
+  buttonText    String
+  buttonLink    String
+  updatedAt     DateTime
+}
+
+model Project {
+  id            Int      @id @default(autoincrement())
+  title         String
+  category      String
+  imageUrl      String
+  imagePublicId String
+  link          String
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime
+}
+
+model Skill {
+  id         Int      @id @default(autoincrement())
+  name       String
+  percentage Int
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime
+}
+
+model User {
+  id        String   @id
+  name      String
+  email     String   @unique
+  password  String
+  role      Role     @default(ADMIN)
+  createdAt DateTime @default(now())
+  updatedAt DateTime
+}
+
 enum Role {
   ADMIN
 }
