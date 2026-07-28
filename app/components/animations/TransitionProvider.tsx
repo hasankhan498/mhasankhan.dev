@@ -35,7 +35,7 @@ export function TransitionProvider({
     <TransitionContext.Provider value={{ navigate }}>
       {children}
 
-      <PageTransition isVisible={transitioning} />
+      <PageTransition />
     </TransitionContext.Provider>
   );
 }
