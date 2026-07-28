@@ -27,7 +27,7 @@ interface PersonalInfo {
 }
 
 interface StatsType {
-  id:string
+  id:number
   number:string
   text:string
 }
