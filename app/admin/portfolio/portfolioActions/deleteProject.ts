@@ -5,12 +5,7 @@ import prisma from "@/lib/prisma";
 export async function deleteProject(formData: FormData) {
   const id = Number(formData.get("id"));
 
-  if (!id) {
-    return {
-      success: false,
-      message: "Invalid project id.",
-    };
-  }
+  if (!id) return;
 
   await prisma.project.delete({
     where: {
@@ -18,8 +13,5 @@ export async function deleteProject(formData: FormData) {
     },
   });
 
-  return {
-    success: true,
-    message: "project deleted successfully.",
-  };
+  return;
 }

@@ -17,8 +17,4 @@ export async function updateSkill(formData: FormData) {
     },
   });
 
-  return {
-    success: true,
-    message: "Skill updated successfully.",
-  };
 }

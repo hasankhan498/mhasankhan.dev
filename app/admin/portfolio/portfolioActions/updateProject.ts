@@ -39,8 +39,5 @@ export async function updateProject(formData: FormData) {
     await deleteImage(existingProject.imagePublicId);
   }
 
-  return {
-    success: true,
-    message: "Project updated successfully.",
-  };
+  return;
 }

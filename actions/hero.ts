@@ -57,8 +57,4 @@ export async function saveHero(formData: FormData) {
     await deleteImage(existingHero.imagePublicId);
   }
 
-  return {
-    success: true,
-    message: "Hero updated successfully.",
-  };
 }

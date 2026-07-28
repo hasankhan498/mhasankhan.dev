@@ -17,8 +17,4 @@ export async function updateStat(formData: FormData) {
     },
   });
 
-  return {
-    success: true,
-    message: "Stat updated successfully.",
-  };
 }

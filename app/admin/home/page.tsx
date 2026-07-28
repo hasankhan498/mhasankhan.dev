@@ -5,7 +5,6 @@ import {
   ImagePlus,
   Type,
   AlignLeft,
-  Eye,
 } from "lucide-react";
 import profileimg from "@/public/assets/images/h9.jpg";
 import { saveHero } from "@/actions/hero";

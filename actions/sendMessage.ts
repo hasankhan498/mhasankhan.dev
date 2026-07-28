@@ -16,8 +16,5 @@ export async function sendMessage(formData:FormData) {
             message
         }
     })
-    return {
-        success:true,
-        message:"Message Sent successfully"
-    }
+    return;
 }

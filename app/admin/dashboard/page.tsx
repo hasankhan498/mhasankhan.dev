@@ -6,26 +6,27 @@ import {
   Briefcase,
   GraduationCap,
   MessageSquare,
-  Star,
-  FileEdit,
-  CheckCircle2,
   Home,
   User,
   PlusCircle,
-  Settings,
-  Mail,
-  Globe,
   ShieldCheck,
   Clock,
-  TrendingUp,
   Rocket,
   Pencil,
-  Bell,
-  Layers,
-  LogOut
+  LogOut,
+  LucideIcon
 } from "lucide-react";
 import { signOut } from "@/lib/auth";
 import prisma from "@/lib/prisma";
+
+
+interface StatCardProps {
+  icon: LucideIcon;
+  label: string;
+  value: string | number;
+}
+
+
 
 
 const adminName = "M Hasan Khan";
@@ -53,7 +54,7 @@ const currentDateTime = new Date().toLocaleString("en-US", {
 });
 
 // Only reused component — used 8 times below, so it earns its keep.
-const StatCard = ({ icon: Icon, label, value }) => (
+const StatCard = ({ icon: Icon, label, value }:StatCardProps) => (
   <div className="flex items-center gap-4 rounded-2xl border border-foreground/10 bg-secondary/30 p-5 transition-colors duration-300 hover:border-accent">
     <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-accent/15 text-accent">
       <Icon size={20} />

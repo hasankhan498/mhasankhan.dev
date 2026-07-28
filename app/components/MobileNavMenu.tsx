@@ -4,14 +4,19 @@ import {
   Menu,
   X,
 } from "lucide-react";
-import { useState } from "react"
-import { usePageTransition } from "../components/animations/TransitionProvider"
+// import { useState } from "react"
+// import { usePageTransition } from "../components/animations/TransitionProvider"
+
+interface MobNavigationProps {
+  navigate: (path: string) => void;
+  setIsMenuOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  isMenuOpen: boolean;
+}
 
 
-
-const MobileNavMenu = () => {
-    const { navigate } = usePageTransition()
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+const MobileNavMenu = ({navigate,setIsMenuOpen,isMenuOpen}:MobNavigationProps) => {
+//     const { navigate } = usePageTransition()
+//   const [isMenuOpen, setIsMenuOpen] = useState(false);
     return (
         <>
             <div className="fixed top-6 right-6 z-50 flex items-center gap-3">

@@ -41,8 +41,4 @@ export const savePersonalInfo = async(formData: FormData) => {
     }
   })
 
-  return {
-    success: true,
-    message: "Personal information updated successfully.",
-  };
 };

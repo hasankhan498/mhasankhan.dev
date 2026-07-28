@@ -11,8 +11,4 @@ export async function deleteStat(formData: FormData) {
     },
   });
 
-  return {
-    success: true,
-    message: "Stat deleted successfully.",
-  };
 }

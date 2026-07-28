@@ -17,8 +17,8 @@ export async function createEducation(formData: FormData) {
     },
   });
 
-  return {
-    success: true,
-    message: "Entity Created successfully.",
-  };
+  // return {
+  //   success: true,
+  //   message: "Entity Created successfully.",
+  // };
 }
