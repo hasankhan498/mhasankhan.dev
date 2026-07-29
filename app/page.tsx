@@ -4,11 +4,12 @@ import { useState, useEffect } from "react";
 import IntroLoader from "@/app/components/animations/IntoLoader";
 import Image from "next/image";
 import profileimg from "@/public/assets/images/profilePortfolio.png";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, LogIn } from "lucide-react";
 import { usePageTransition } from "./components/animations/TransitionProvider";
 import TabNavigation from "./components/TabNavigation";
 import MobileNavMenu from "./components/MobileNavMenu";
 import { getHeroData } from "@/actions/getHero";
+import Link from "next/link";
 
 interface heroData {
   id: number;
@@ -66,7 +67,7 @@ export default function Home() {
           {/* Hero Content */}
           <div className="flex flex-col items-center gap-6 text-center lg:items-start lg:text-left">
             <div className="flex items-center gap-4 uppercase">
-              <span className="h-1.5 w-16 rounded-full bg-accent"></span>
+              <span className="hidden sm:block h-1.5 w-16 rounded-full bg-accent"></span>
 
               <h1 className="font-heading text-3xl font-black uppercase tracking-wide text-accent sm:text-4xl md:text-5xl xl:text-6xl">
                 I&apos;M {data?.name ? ` ${data.name}` : ""}
@@ -92,7 +93,7 @@ export default function Home() {
               <span className="absolute inset-0 origin-right scale-x-0 bg-accent transition-transform duration-500 ease-in-out group-hover:scale-x-100" />
 
               {/* Text */}
-              <span className="relative z-10 px-8 uppercase font-semibold tracking-[0.18em] transition-colors duration-500 group-hover:text-foreground">
+              <span className="relative z-10 px-4 md:px-6 lg:px-8 uppercase font-semibold tracking-[0.2em] md:tracking-[0.12em] lg:tracking-[0.18em] transition-colors duration-500 group-hover:text-foreground text-sm md:text-lg lg:text-xl">
                 {data?.buttonText}
               </span>
 
