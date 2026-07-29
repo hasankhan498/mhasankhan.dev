@@ -16,6 +16,7 @@ import {
   FaDribbble,
   FaInstagram,
   FaLinkedin,
+  FaGithub,
 } from "react-icons/fa";
 import { sendMessage } from "@/actions/sendMessage"
 
@@ -28,6 +29,7 @@ const socialLinks = [
   { id: 1, icon: FaFacebookF, link: "https://www.facebook.com/share/17ufPaKj6v/" },
   { id: 2, icon: FaInstagram, link: "https://www.instagram.com/codewithhas?igsh=dnlja3hsMTdqb28%3D" },
   { id: 3, icon: FaLinkedin, link: "https://www.linkedin.com/public-profile/settings/?trk=d_flagship3_profile_self_view_public_profile&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BvXfeckaFSqKWoHB2YEWQiA%3D%3D" },
+  { id: 4, icon: FaGithub, link: "https://github.com/hasankhan498"},
 ]
 
 const page = () => {
