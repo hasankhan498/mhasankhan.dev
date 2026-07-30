@@ -11,9 +11,6 @@ import {
 } from "lucide-react"
 import {
   FaFacebookF,
-  FaTwitter,
-  FaYoutube,
-  FaDribbble,
   FaInstagram,
   FaLinkedin,
   FaGithub,
