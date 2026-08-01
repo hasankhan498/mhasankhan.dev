@@ -18,23 +18,61 @@ const spaceGrotesk = Space_Grotesk({
   variable: "--font-heading",
 });
 
+
 export const metadata: Metadata = {
   title: {
-    default: "MH Khan | Full Stack Developer",
-    template: "%s | MH Khan",
+    default: "M Hasan Khan | Full Stack Web Developer",
+    template: "%s | M Hasan Khan",
   },
+
   description:
-    "Full Stack Web Developer specializing in Next.js, React, Laravel, TypeScript, Tailwind CSS, and modern web applications.",
+    "Portfolio of M Hasan Khan, a Full Stack Web Developer specializing in Next.js, React, Laravel, TypeScript, Tailwind CSS, PostgreSQL, Prisma, and modern scalable web applications.",
+
   keywords: [
+    "M Hasan Khan",
     "MH Khan",
     "Full Stack Developer",
+    "Web Developer",
+    "Frontend Developer",
+    "Backend Developer",
     "Next.js",
     "React",
-    "Laravel",
     "TypeScript",
+    "Laravel",
+    "PHP",
     "Tailwind CSS",
+    "Prisma",
+    "PostgreSQL",
     "Portfolio",
   ],
+
+  authors: [{ name: "M Hasan Khan" }],
+  creator: "M Hasan Khan",
+  publisher: "M Hasan Khan",
+
+  metadataBase: new URL("https://mhasankhandev.vercel.app/"),
+
+  openGraph: {
+    title: "M Hasan Khan | Full Stack Web Developer",
+    description:
+      "Explore the portfolio of M Hasan Khan featuring modern web applications, dashboards, and full-stack projects built with Next.js, Laravel, React, TypeScript, and Prisma.",
+    url: "https://mhasankhandev.vercel.app/",
+    siteName: "M Hasan Khan Portfolio",
+    locale: "en_US",
+    type: "website",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "M Hasan Khan | Full Stack Web Developer",
+    description:
+      "Portfolio showcasing modern full-stack web applications and development expertise.",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({
@@ -45,20 +83,20 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${inter.variable} ${spaceGrotesk.variable} antialiased`}>
-         <TransitionProvider>
+        <TransitionProvider>
           <PageTransition />
           <AuthProvider>
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >
-            {children}
-            <FloatingWhatsApp />
-          </ThemeProvider>
+            <ThemeProvider
+              attribute="class"
+              defaultTheme="system"
+              enableSystem
+              disableTransitionOnChange
+            >
+              {children}
+              <FloatingWhatsApp />
+            </ThemeProvider>
           </AuthProvider>
-         </TransitionProvider>
+        </TransitionProvider>
       </body>
     </html>
   );

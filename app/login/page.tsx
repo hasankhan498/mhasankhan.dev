@@ -1,5 +1,15 @@
 "use client"
 
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Login",
+  robots: {
+    index: false,
+    follow: false,
+  },
+};
+
 import { Mail, Lock, ArrowRight, ShieldCheck, LayoutDashboard, Sparkles } from "lucide-react"
 import { useActionState, useEffect } from "react"
 import { logIn } from "@/actions/logInAction"
