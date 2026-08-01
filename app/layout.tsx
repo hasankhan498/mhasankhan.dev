@@ -6,6 +6,7 @@ import PageTransition from "./components/animations/PageTransitions";
 import { TransitionProvider } from "./components/animations/TransitionProvider";
 import AuthProvider from "./components/providers/AuthProvider";
 import FloatingWhatsApp from "./components/common/CustomWhatsAppBtn";
+import { Analytics } from '@vercel/analytics/next';
 
 
 const inter = Inter({
@@ -93,6 +94,7 @@ export default function RootLayout({
               disableTransitionOnChange
             >
               {children}
+              <Analytics />
               <FloatingWhatsApp />
             </ThemeProvider>
           </AuthProvider>
