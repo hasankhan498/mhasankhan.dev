@@ -57,6 +57,10 @@ export const metadata: Metadata = {
 
   metadataBase: new URL("https://mhasankhandev.vercel.app/"),
 
+  alternates: {
+    canonical: './',
+  },
+
   openGraph: {
     title: "M Hasan Khan | Full Stack Web Developer",
     description:
