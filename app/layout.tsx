@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     "Portfolio of M Hasan Khan, a Full Stack Web Developer specializing in Next.js, React, Laravel, TypeScript, Tailwind CSS, PostgreSQL, Prisma, and modern scalable web applications.",
 
     verification: {
-    google: "xhy8FaFs9Mls92VfLQYgxUIgJFUOHf7BMfx1Pz_KNo8",
+    google: "XP5kPc3hyZqICPA3YgUenazRXRZ8B6zpWWP_FGXhg7g",
   },
 
   keywords: [
